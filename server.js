@@ -27,7 +27,7 @@ app.listen(PORT, ()=>{
 })
 })
 app.get('/', (req, res)=>{
-    res.status(200).json({message:"Welcome to the backend of Fresh Mart App"})
+    res.status(200).json({message:"Welcome to Fresh Mart App Backend  "})
 })
 
 app.use('/api', routes)
