@@ -4,7 +4,7 @@ const { authorization, authAdmin } = require("../Middlewares/authMiddleware")
 
 const router = express.Router()
 
-router.get('/all-product', authorization,  handleGetAllProduct)
+router.get('/all-product', authAdmin,  handleGetAllProduct)
 
 router.post('/add-product', authAdmin, handleAddProduct)
 

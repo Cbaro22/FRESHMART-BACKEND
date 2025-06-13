@@ -6,9 +6,9 @@ const router = express.Router()
 
 router.post('/registration',   handleUserRegistration)
 
-router.post('/login',authorization, handleUserLogin)
+router.post('/login', handleUserLogin)
 
-router.post('/forgot-password',authorization, handleForgotPassword)
+router.post('/forgot-password', handleForgotPassword)
 
 router.patch('/reset-password', authorization,  handleResetPassword)
 
