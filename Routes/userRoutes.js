@@ -14,6 +14,6 @@ router.patch('/reset-password', authorization,  handleResetPassword)
 
 router.delete('/delete-account:id', authAdmin, handleDeleteUserAccount)
 
-router.get('/all-users', authorization,  authAdmin, handleGetAllUsers)
+router.get('/all-users',  authAdmin, handleGetAllUsers)
 
 module.exports = router
