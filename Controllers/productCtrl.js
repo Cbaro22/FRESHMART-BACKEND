@@ -4,7 +4,7 @@ const Products = require("../models/productModel")
 
     const allProduct = await Products.find()
 
-    res.status(201).json(
+    res.status(200).json(
         {
             message:"Product List",
           allProduct
@@ -42,7 +42,7 @@ const handleGetOneProduct = async (req, res)=>{
     const oneProduct = await Products.findById(id)
 
     if(!oneProduct){
-        return res.status(400).json({message:"Product not found"})
+        return res.status(404).json({message:"Product not found"})
     }
 
     res.status(200).json({
@@ -91,7 +91,7 @@ const handleProductUpdate = async (req, res)=>{
 
          await existingProduct.save()
 
-         res.status(200).json({
+         res.status(201).json({
          message:"Update Successful",
          existingProduct
 
