@@ -97,7 +97,7 @@ const handleProductUpdate = async (req, res)=>{
 
       })
       } else{
-        res.status(400).json({message:"Product not found"})
+        res.status(404).json({message:"Product not found"})
       }
 
       } catch (error) {
